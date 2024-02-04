@@ -1,5 +1,7 @@
 ## Valentine Day Countdown Timer
 
+Countdown to Valentine Day.
+
 ## Getting Started
 
 Run the following commands:
