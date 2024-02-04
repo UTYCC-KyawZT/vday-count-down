@@ -1,6 +1,5 @@
 "use client";
 
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Container, Typography, Slide } from '@mui/material';
 import { Player } from '@lottiefiles/react-lottie-player';
@@ -80,14 +79,14 @@ function Home() {
                     Created by <a className='text-orange-500 font-bold' href="https://kyawkingston.com" target='_blank'>Kingston</a>
                 </Typography>
             </div>
-            <div className='flex mx-auto justify-center'>
+            <a href="https://github.com/UTYCC-KyawZT/vday-count-down" target='_blank' className='flex mx-auto justify-center'>
                 <Player
                     autoplay
                     loop
                     src="/lottiefiles/git.json"
                     style={{ height: '50px', width: '50px' }}
                 />
-            </div>
+            </a>
             <br />
         </Container>
     )
