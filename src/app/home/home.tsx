@@ -7,9 +7,20 @@ import { Player } from '@lottiefiles/react-lottie-player';
 const calculateTimeLeft = () => {
     const date = new Date();
     let year = date.getFullYear();
-    const targetDate = year + '-02-14';
+    let targetDate = new Date(year + '-02-14 00:00:00');
+
+    console.log("prev targetDate " + targetDate + " and today date: " + date);
+
+    if (targetDate < date) {
+        year += 1;
+        targetDate = new Date(year + '-02-14 00:00:00');
+    }
+
     const difference = +new Date(targetDate) - +new Date();
     let timeLeft = {};
+
+    console.log("targetDate: " + targetDate);
+    console.log("difference: " + difference);
 
     if (difference > 0) {
         timeLeft = {
@@ -60,7 +71,7 @@ function Home() {
                             <div>{timeLeft.seconds}</div>
                         </div>
                         <div className="grid grid-cols-4 text-center text-xl">
-                            <div>Days</div><div>Hours</div><div>Minutes</div><div>Seconds</div>
+                            <div>Days</div><div>Hours</div><div>Mins</div><div>Secs</div>
                         </div>
                     </div>
                     <div></div>
